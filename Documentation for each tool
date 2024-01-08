@@ -1,0 +1,22 @@
+Data Preparation in Talend
+
+Missing values in the attribute “Satisfied level” were handled by removing rows containing these values.
+A new attribute, “Churn”, was added by analyzing the "Days Since Last Purchase" attribute and labeling the upper quartile as churned.
+The “Age Group” attribute was created and classified into three categories: below 30, 30-40, and above 40.
+The “Favorite Category” attribute was set based on membership type, age group, and gender, leading to the definition of seven distinct categories.
+
+Importing and Setting Variable Roles in SAS Enterprise Miner
+The exported dataset from Talend Data Preparation Tool was imported into SAS Enterprise Miner. Variables were assigned specific roles, with "Customer ID" serving as an identifier and "Total Spend" as the target variable.
+
+Data Exploration
+Statistical exploration revealed five interval and six nominal input variables, with "Total Spend" being the interval target variable. Correlations were analyzed, with "Item Purchased" and "Average Rating" showing a strong positive relationship with the target variable.
+
+Outlier Removal and Model Settings
+Outliers and rare values were filtered out to ensure data quality. Cross-validation was chosen over a simple 70-30 data split to enhance the model's robustness and generalizability. Decision trees were implemented with a significance level of 0.1 and a maximum of three branches to align with the categorical variables present in the dataset.
+
+Model Insights and Performance
+
+Regression Tree Analysis: Illustrated the impact of customer behaviors and satisfaction on spending amounts, aiding targeted marketing strategies.
+Random Forest: Demonstrated through score distribution and ranking plots, indicating the model's predictive accuracy, especially in identifying higher spenders.
+Gradient Boosting: Executed with 50 iterations and a learning rate of 0.1 to ensure the model learned effectively and generalized well to new data.
+The analysis uncovered that "Items Purchased" and "Average Rating" significantly influenced customer spending. The boosting model's statistical outputs showed a strong performance with a low Average Squared Error, implying accurate predictions close to actual spending amounts.
